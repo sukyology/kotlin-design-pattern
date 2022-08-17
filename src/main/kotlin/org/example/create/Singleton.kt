@@ -18,6 +18,22 @@ class JavaSingleton private constructor() {
     }
 }
 
+/**
+ * reference [stackoverflow](https://stackoverflow.com/a/8297830/3562860)
+ */
+class ThreadSafeSingleton private constructor() {
+
+    class Holder {
+        companion object {
+            val INSTANCE = ThreadSafeSingleton()
+        }
+    }
+
+    companion object {
+        val instance = Holder.INSTANCE
+    }
+}
+
 object KotlinSingleton {
     fun statelessMethod() {
         println("stateless method")
