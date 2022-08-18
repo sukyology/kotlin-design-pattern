@@ -36,7 +36,7 @@ class ThreadSafeSingleton private constructor() {
 
 object KotlinSingleton {
     fun statelessMethod() {
-        println("stateless method")
+        println("stateless method!!!")
     }
 }
 
